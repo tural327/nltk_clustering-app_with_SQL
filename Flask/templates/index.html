@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/dsgn.css">
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="headtext">
+            My Mysql display
+        </div>
+        <form action="/" method="POST">
+        <div class="maintext">
+            Please add your error message
+        </div>
+        <input type="text" name="msg" class="textinput" size="50"><br>
+        <button type="submit" value="submit">Show database or add message</button>
+        </form>
+    <div class="output">
+        {%if sheet%}
+        {{sheet | safe}}
+        {%endif%}
+    </div>
+
+    </body>
+</html>
