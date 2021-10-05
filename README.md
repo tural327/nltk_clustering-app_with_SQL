@@ -26,4 +26,18 @@ If we applied KMeans(n_clusters=5) I got :
 GaussianMixture model was more smooth clustering I will be save that model for my Flask server
 
 # Flask & Mysql 
-**Still progress.... ASAP will be load**
+I made simple [Flask](https://github.com/tural327/nltk_clustering-app_with_SQL/tree/master/Flask)
+
+* For making connection with my server and adding error message I made a simple script [server.py](https://github.com/tural327/nltk_clustering-app_with_SQL/blob/master/Flask/server.py). I just using simple MYSQL code for adding and making commit for connection 
+* While adding text I need clean my text so for that reason I made [main.py](https://github.com/tural327/nltk_clustering-app_with_SQL/blob/master/Flask/main.py) script - script contain same cleaning function on [main](https://github.com/tural327/nltk_clustering-app_with_SQL/blob/master/clustering.ipynb) file
+* Main [app.py](https://github.com/tural327/nltk_clustering-app_with_SQL/blob/master/Flask/app.py) file I used :
+```python
+        my_text = str(request.form.get("msg"))
+        result = len(my_text)
+        if result >0:
+ ```
+ 
+ Because we need avoid error while text not added and just show table.....
+ 
+ While adding error message data.csv file will be update which is containing last data on table and saving 
+ 
